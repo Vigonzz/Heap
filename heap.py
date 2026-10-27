@@ -16,13 +16,14 @@ class Node:
 class HeapBuilder:
 
     def createMinHeap(self, values):
-        # Build the list and tree
+        ''' Build the min heap from the provided values returns the root of 
+         the tree '''
         heap_list = self._build_array(values, True)
         root = self._array_to_tree(heap_list)
         return root
 
     def createMaxHeap(self, values):
-        # Build the list and tree
+        ''' Build the max heap from the provided values returns the root of the tree'''
         heap_list = self._build_array(values, False)
         root = self._array_to_tree(heap_list)
         return root
@@ -84,7 +85,7 @@ class HeapBuilder:
 #print(min_heap_test)
 
 # Testing the heap
-builder = HeapBuilder()
+# builder = HeapBuilder()
 #test_list = [3,5,8,1]
 #builder._sift_up(test_list, 3, True)
 #print(test_list)
@@ -102,14 +103,14 @@ builder = HeapBuilder()
 #print(test_list)
 
 # Testing the build_array (helper method)
-test = builder._build_array([5, 3, 8, 1, 4], False)
-print(test)
+# test = builder._build_array([5, 3, 8, 1, 4], False)
+# print(test)
 
 
-# Testing the build of min heap 
+# Testing the build of min heap returns [5, 3, 8, 1, 4]
 #min_heap = builder.createMinHeap([5, 3, 8, 1, 4])
 #print(min_heap.data)
 
-# Testing the build of max heap 
-max_heap = builder.createMinHeap([5, 3, 8, 1, 4])
-print(max_heap.data)
+# Testing the build of max heap returns [8, 4, 5, 1, 3]
+#max_heap = builder.createMinHeap([5, 3, 8, 1, 4])
+#print(max_heap.data)
