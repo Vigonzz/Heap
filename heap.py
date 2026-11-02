@@ -6,6 +6,9 @@
 # heap as a binary tree. You have to implement both Max-Heap 
 # and Min-Heap. Write sample test cases to validate your implementation.
 
+# This assignment used assistance from AI to debug, understand, and go over structure:
+# https://claude.ai/share/6e0e5712-7e05-47cf-8aa0-0245c0231fc6
+
 class Node:
     ''' Creates the node '''
     def __init__(self, data):
