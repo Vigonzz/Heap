@@ -5,6 +5,8 @@ from bst_to_heap_transformer import BSTToHeapTransformer
 
 def is_valid_heap(node, is_min_heap):
     ''' Checks to see if the head is valid '''
+    # Nesting confuses me so i had to look at documentation:
+    # Python nested if statements. W3Schools. (n.d.-a). https://www.w3schools.com/python/python_if_nested_if.asp 
     if node is None:
         return True 
     if node.left is not None:

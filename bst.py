@@ -12,6 +12,11 @@ class BSTNode:
         self.left = None
         self.right = None
         self.parent = None
+
+# Better understanding for BST:
+# GeeksforGeeks. (2026h, September 21). Binary search tree in python. https://www.geeksforgeeks.org/python/binary-search-tree-in-python/ 
+# AlgoMonster. (n.d.). 285. inorder successor in BST. https://algo.monster/liteproblems/285 
+
 class BST:
 
     def __init__(self):
@@ -111,7 +116,10 @@ class BST:
             if child is not None:
                 child.parent = parent
     
+    # Needed a better understanding of traversal techniques:
+    # GeeksforGeeks. (2025f, December 6). Tree traversal techniques. https://www.geeksforgeeks.org/dsa/tree-traversals-inorder-preorder-and-postorder/ 
     def inOrderTraversal(self):
+        """ Visits node in order of left-root-right """
         traverse = []
         self.inOrderHelper(self.root, traverse)
         return traverse
@@ -126,6 +134,7 @@ class BST:
     # From the skeleton provided in the assignments note
     # PreOrder
     def preOrder(self):
+        """ Visits node root-left-right """
         traverse = []
         self.preOrder(self.root, traverse)
         return traverse
@@ -139,6 +148,7 @@ class BST:
 
     #postOrder
     def postOrder(self):
+        """ node visits in order left-right-root """
         traverse = []
         self.postOrder(self.root, traverse)
         return traverse
